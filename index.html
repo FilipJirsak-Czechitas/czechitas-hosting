@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Hosting</title>
+
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Hosting</h1>
+        </section>
+        <section>Zpřístupnění webu na internetu pro všechny</section>
+        <section>
+          <h2>GitHub Pages</h2>
+          <p>Vhodné pro jednoduchý web</p>
+          <p>(HTML, CSS, JavaScript – bez WebPacku)</p>
+        </section>
+        <section>
+          <section>
+            <h2>Netlify</h2>
+            <h2>Vercel</h2>
+            <p><a href="https://www.netlify.com">www.netlify.com</a></p>
+            <p><a href="https://vercel.com">vercel.com</a></p>
+          </section>
+          <section>
+            <ul>
+              <li>Např. <a href="https://cafelora.netlify.app">cafelora.netlify.app</a></li>
+              <li>Např. <a href="https://czechitas-cafelora.vercel.app">czechitas-cafelora.vercel.app</a></li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h2>Nevhodné</h2>
+          <p>Webhostingy (např. s PHP)</p>
+        </section>
+        <section>
+          <section>
+            <h2>Vlastní doména</h2>
+            <p>Pokud nechcete použít *.netlify.app nebo *.vercel.app</p>
+            <ul>
+              <li>Např. <a href="https://subreg.cz/cz/domeny/registrace-domeny/">SubReg</a></li>
+              <li>Následně je nutné doménu přesměrovat na hosting</li>
+            </ul>
+          </section>
+          <section>
+            <p>Na vyzkoušení můžu poskytnout</p>
+            <ul>
+              <li>*.zkusmo.eu</li>
+              <li>*.nyni.eu</li>
+              <li>*.na-webu.info</li>
+            </ul>
+          </section>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
+</html>
