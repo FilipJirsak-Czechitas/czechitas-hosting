@@ -2,62 +2,164 @@
 <html lang="cs">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
     <title>Hosting</title>
 
     <link rel="stylesheet" href="dist/reset.css" />
     <link rel="stylesheet" href="dist/reveal.css" />
     <link rel="stylesheet" href="dist/theme/white.css" />
-
+    <style>
+      ul.yes li:before {
+        content: "✔︎";
+        color: green;
+        margin-right: 0.5em;
+      }
+      ul.no li:before {
+        content: "×";
+        color: red;
+        margin-right: 0.5em;
+      }
+      ul.yes,
+      ul.no {
+        list-style-type: none;
+      }
+    </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section>
           <h1>Hosting</h1>
+          <p>Zpřístupnění webu na internetu</p>
         </section>
-        <section>Zpřístupnění webu na internetu pro všechny</section>
         <section>
-          <h2>GitHub Pages</h2>
-          <p>Vhodné pro jednoduchý web</p>
-          <p>(HTML, CSS, JavaScript – bez WebPacku)</p>
+          <h2>Chcete</h2>
+          <ul class="yes">
+            <li>podporuje <code>npm</code></li>
+            <li>nasazení (deploy) z GitHubu</li>
+            <li>obvykle cloudová řešení</li>
+            <li>
+              <a href="https://jamstack.org">Jamstack</a> – JavaScript, API and
+              Markup
+            </li>
+            <li>static webhosting, static site webhosting</li>
+            <li>
+              Např. <a href="https://vercel.com">Vercel</a>,
+              <a href="https://www.netlify.com">Netlify</a>, případně i
+              <a href="https://pages.github.com">GitHub Pages</a>
+            </li>
+            <li>Mají plány zdarma, které bohatě stačí na hobby projekty</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Nechcete</h2>
+          <ul class="no">
+            <li>Webhosting</li>
+            <li>správa pomocí FTP/SFTP</li>
+            <li>LAMP – Linux, Apache, MySQL, PHP</li>
+            <li>Např. Wedos, Active24</li>
+            <li>
+              placené; občas někdo nabízí plán zdarma, který ale bývá
+              nepoužitelný
+            </li>
+          </ul>
         </section>
         <section>
           <section>
-            <h2>Netlify</h2>
-            <h2>Vercel</h2>
-            <p><a href="https://www.netlify.com">www.netlify.com</a></p>
-            <p><a href="https://vercel.com">vercel.com</a></p>
-          </section>
-          <section>
+            <p>
+              <strong>Netlify</strong>:
+              <a href="https://www.netlify.com">www.netlify.com</a>
+            </p>
+            <p>
+              <strong>Vercel</strong>:
+              <a href="https://vercel.com">vercel.com</a>
+            </p>
+            <p>
+              <strong>Cloudflare Pages</strong>:
+              <a href="https://pages.cloudflare.com">pages.cloudflare.com</a>
+            </p>
+            <p>Poskytují zdarma doménu 3. úrovně</p>
             <ul>
-              <li>Např. <a href="https://cafelora.netlify.app">cafelora.netlify.app</a></li>
-              <li>Např. <a href="https://czechitas-cafelora.vercel.app">czechitas-cafelora.vercel.app</a></li>
+              <li>
+                Např.
+                <a href="https://cafelora.netlify.app">cafelora.netlify.app</a>
+              </li>
+              <li>
+                Např.
+                <a href="https://czechitas-cafelora.vercel.app"
+                  >czechitas-cafelora.vercel.app</a
+                >
+              </li>
             </ul>
           </section>
-        </section>
-        <section>
-          <h2>Nevhodné</h2>
-          <p>Webhostingy (např. s PHP)</p>
+          <section>
+            <h2>Vercel a Next.js</h2>
+            <p>
+              Vercel je tvůrce Next.js, takže pro hostování Next.js projektů je
+              to nejlepší volba.
+            </p>
+          </section>
+          <section>
+            <p>
+              <strong>GitHub Pages</strong>:
+              <a href="https://pages.github.com">pages.github.com</a>
+            </p>
+            <ul>
+              <li>Vhodné pro jednoduchý web</li>
+              <li>(HTML, CSS, JavaScript – bez WebPacku resp. npm)</li>
+              <li>
+                Obvykle se používá jako doprovodný web pro projekty na GitHubu
+              </li>
+            </ul>
+          </section>
         </section>
         <section>
           <section>
             <h2>Vlastní doména</h2>
-            <p>Pokud nechcete použít *.netlify.app nebo *.vercel.app</p>
+            <p>
+              Pokud <strong>nechcete</strong> použít
+              <code>*.netlify.app</code> nebo <code>*.vercel.app</code>
+            </p>
             <ul>
-              <li>Např. <a href="https://subreg.cz/cz/domeny/registrace-domeny/">SubReg</a></li>
-              <li>Následně je nutné doménu přesměrovat na hosting</li>
+              <li>
+                Zvolit si registrátora, např.
+                <a href="https://subreg.cz/cz/domeny/registrace-domeny/"
+                  >SubReg</a
+                >
+              </li>
+              <li>
+                Následně je nutné doménu přesměrovat na hosting – podle návodu
+                hostingu
+              </li>
             </ul>
           </section>
           <section>
-            <p>Na vyzkoušení můžu poskytnout</p>
+            <ul>
+              <li>
+                V cenách od stokorun ročně po „prémiové“ domény za desítky
+                tisíc.
+              </li>
+              <li>Pozor na cenu za prodloužení domény po roce!</li>
+            </ul>
+          </section>
+          <section>
+            <p>Na vyzkoušení můžu zdarma poskytnout</p>
             <ul>
               <li>*.zkusmo.eu</li>
               <li>*.nyni.eu</li>
               <li>*.na-webu.info</li>
             </ul>
           </section>
+        </section>
+        <section>
+          <p>Ukázka…</p>
+          <!-- FilipJirsak/Czechitas-cafelora -->
+          <!-- cafelora.zkusmo.eu -->
+          <!-- czechitas-cafelora.vercel.app -->
         </section>
       </div>
     </div>
